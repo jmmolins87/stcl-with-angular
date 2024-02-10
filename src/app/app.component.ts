@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import './web-component/wc-button.js';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  textButton: string = "Pulsar";
+  public textButton: string = "Click me from angular";
+  clickListener() {
+    alert( 'Hola desde un WC de Angular' );
+  }
 }
